@@ -19,5 +19,5 @@ export class NFTBlockTask {
 
 export type NFTBlockTaskDocument = NFTBlockTask & Document;
 
-export const NFTBlockTaskSchema: SchemaFactory =
+export const NFTBlockTaskSchema =
   SchemaFactory.createForClass(NFTBlockTask);

@@ -32,5 +32,5 @@ export class NFTCollectionTask {
 
 export type NFTCollectionTaskDocument = NFTCollectionTask & Document;
 
-export const NFTCollectionTaskSchema: SchemaFactory =
+export const NFTCollectionTaskSchema =
   SchemaFactory.createForClass(NFTCollectionTask);

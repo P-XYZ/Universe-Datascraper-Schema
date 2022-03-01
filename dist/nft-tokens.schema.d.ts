@@ -1,4 +1,3 @@
-import { SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
 export declare class Owner {
     address: string;
@@ -25,4 +24,4 @@ export declare class NFTToken {
     needToRefresh: boolean;
 }
 export declare type NFTTokensDocument = NFTToken & Document;
-export declare const NFTTokensSchema: SchemaFactory;
+export declare const NFTTokensSchema: import("mongoose").Schema<any, import("mongoose").Model<any, any, any, any>, any, any>;

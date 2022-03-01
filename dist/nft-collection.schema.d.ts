@@ -1,4 +1,3 @@
-import { SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
 export declare class NFTCollection {
     contractAddress: string;
@@ -13,4 +12,4 @@ export declare class NFTCollection {
     totalSupply: number;
 }
 export declare type NFTCollectionDocument = NFTCollection & Document;
-export declare const NFTCollectionSchema: SchemaFactory;
+export declare const NFTCollectionSchema: import("mongoose").Schema<any, import("mongoose").Model<any, any, any, any>, any, any>;

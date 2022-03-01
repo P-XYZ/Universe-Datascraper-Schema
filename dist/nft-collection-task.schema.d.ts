@@ -1,4 +1,3 @@
-import { SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
 import { MessageStatus } from './types';
 export declare class NFTCollectionTask {
@@ -11,4 +10,4 @@ export declare class NFTCollectionTask {
     errorMessage: string;
 }
 export declare type NFTCollectionTaskDocument = NFTCollectionTask & Document;
-export declare const NFTCollectionTaskSchema: SchemaFactory;
+export declare const NFTCollectionTaskSchema: import("mongoose").Schema<any, import("mongoose").Model<any, any, any, any>, any, any>;

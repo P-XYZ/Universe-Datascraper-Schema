@@ -1,4 +1,3 @@
-import { SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
 import { MessageStatus } from './types';
 export declare class NFTBlockTask {
@@ -7,4 +6,4 @@ export declare class NFTBlockTask {
     status: MessageStatus;
 }
 export declare type NFTBlockTaskDocument = NFTBlockTask & Document;
-export declare const NFTBlockTaskSchema: SchemaFactory;
+export declare const NFTBlockTaskSchema: import("mongoose").Schema<any, import("mongoose").Model<any, any, any, any>, any, any>;
