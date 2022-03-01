@@ -71,6 +71,7 @@ export type NFTTokensDocument = NFTToken & Document;
 export const NFTTokensSchema =
   SchemaFactory.createForClass(NFTToken);
 
+NFTTokensSchema.index({ contractAddress: 1, tokenId: 1 }, { unique: true });
 NFTTokensSchema.index({ "owners.address": 1 });
 NFTTokensSchema.index({ "owners.transactionHash": 1 });
 
