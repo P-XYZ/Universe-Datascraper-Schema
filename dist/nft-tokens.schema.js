@@ -97,6 +97,7 @@ NFTToken = __decorate([
 ], NFTToken);
 exports.NFTToken = NFTToken;
 exports.NFTTokensSchema = mongoose_1.SchemaFactory.createForClass(NFTToken);
+exports.NFTTokensSchema.index({ contractAddress: 1, tokenId: 1 }, { unique: true });
 exports.NFTTokensSchema.index({ "owners.address": 1 });
 exports.NFTTokensSchema.index({ "owners.transactionHash": 1 });
 //# sourceMappingURL=nft-tokens.schema.js.map
