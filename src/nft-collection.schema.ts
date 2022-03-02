@@ -1,8 +1,8 @@
-import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { Document } from 'mongoose';
-import { SupportedTokenTypes } from './types';
+import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
+import { Document } from "mongoose";
+import { SupportedTokenTypes } from "./types";
 
-@Schema({ timestamps: true, collection: 'nft-collections' })
+@Schema({ timestamps: true, collection: "nft-collections" })
 export class NFTCollection {
   @Prop({ required: true, trim: true, index: true, unique: true })
   public contractAddress: string;
@@ -17,7 +17,7 @@ export class NFTCollection {
   public firstProcessedBlock: number;
 
   @Prop()
-  public lastProcessedBlock: number; 
+  public lastProcessedBlock: number;
 
   @Prop()
   public sentAt: Date;
@@ -35,10 +35,15 @@ export class NFTCollection {
   public owner: string;
 
   @Prop()
-  public totalSupply: number;
+  public vip: boolean;
 }
 
 export type NFTCollectionDocument = NFTCollection & Document;
 
-export const NFTCollectionSchema =
-  SchemaFactory.createForClass(NFTCollection);
+export const NFTCollectionSchema = SchemaFactory.createForClass(NFTCollection);
+
+NFTCollectionSchema.index({ contractAddress: 1 });
+NFTCollectionSchema.index(
+  { vip: 1 },
+  { partialFilterExpression: { vip: { $exists: true } } }
+);
