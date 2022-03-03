@@ -10,4 +10,4 @@ export declare class NFTCollectionTask {
     errorMessage: string;
 }
 export declare type NFTCollectionTaskDocument = NFTCollectionTask & Document;
-export declare const NFTCollectionTaskSchema: import("mongoose").Schema<Document<NFTCollectionTask, any, any>, import("mongoose").Model<Document<NFTCollectionTask, any, any>, any, any, any>, any, any>;
+export declare const NFTCollectionTaskSchema: import("mongoose").Schema<any, import("mongoose").Model<any, any, any, any>, any, any>;

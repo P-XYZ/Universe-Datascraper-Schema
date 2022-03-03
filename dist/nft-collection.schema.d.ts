@@ -1,4 +1,4 @@
-import { Document } from 'mongoose';
+import { Document } from "mongoose";
 export declare class NFTCollection {
     contractAddress: string;
     tokenType: string;
@@ -10,7 +10,7 @@ export declare class NFTCollection {
     name: string;
     symbol: string;
     owner: string;
-    totalSupply: number;
+    vip: boolean;
 }
 export declare type NFTCollectionDocument = NFTCollection & Document;
-export declare const NFTCollectionSchema: import("mongoose").Schema<Document<NFTCollection, any, any>, import("mongoose").Model<Document<NFTCollection, any, any>, any, any, any>, any, any>;
+export declare const NFTCollectionSchema: import("mongoose").Schema<any, import("mongoose").Model<any, any, any, any>, any, any>;

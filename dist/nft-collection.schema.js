@@ -56,11 +56,13 @@ __decorate([
 ], NFTCollection.prototype, "owner", void 0);
 __decorate([
     (0, mongoose_1.Prop)(),
-    __metadata("design:type", Number)
-], NFTCollection.prototype, "totalSupply", void 0);
+    __metadata("design:type", Boolean)
+], NFTCollection.prototype, "vip", void 0);
 NFTCollection = __decorate([
-    (0, mongoose_1.Schema)({ timestamps: true, collection: 'nft-collections' })
+    (0, mongoose_1.Schema)({ timestamps: true, collection: "nft-collections" })
 ], NFTCollection);
 exports.NFTCollection = NFTCollection;
 exports.NFTCollectionSchema = mongoose_1.SchemaFactory.createForClass(NFTCollection);
+exports.NFTCollectionSchema.index({ contractAddress: 1 });
+exports.NFTCollectionSchema.index({ vip: 1 }, { partialFilterExpression: { vip: { $exists: true } } });
 //# sourceMappingURL=nft-collection.schema.js.map

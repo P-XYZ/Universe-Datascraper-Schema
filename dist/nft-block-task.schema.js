@@ -29,6 +29,10 @@ __decorate([
     }),
     __metadata("design:type", String)
 ], NFTBlockTask.prototype, "status", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ trim: true }),
+    __metadata("design:type", String)
+], NFTBlockTask.prototype, "errorMessage", void 0);
 NFTBlockTask = __decorate([
     (0, mongoose_1.Schema)({ timestamps: true, collection: 'nft-block-tasks' })
 ], NFTBlockTask);
