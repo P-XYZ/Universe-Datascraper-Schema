@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.MediaFileType = exports.SupportedTokenTypes = exports.MessageStatus = void 0;
+exports.SourceTypes = exports.MediaFileType = exports.SupportedTokenTypes = exports.MessageStatus = void 0;
 var MessageStatus;
 (function (MessageStatus) {
     MessageStatus["sent"] = "sent";
@@ -24,4 +24,9 @@ var MediaFileType;
     MediaFileType["Misc"] = "misc";
     MediaFileType["IFRAME"] = "iframe";
 })(MediaFileType = exports.MediaFileType || (exports.MediaFileType = {}));
+var SourceTypes;
+(function (SourceTypes) {
+    SourceTypes["ARCHIVE"] = "ARCHIVE";
+    SourceTypes["MONITOR"] = "MONITOR";
+})(SourceTypes = exports.SourceTypes || (exports.SourceTypes = {}));
 //# sourceMappingURL=types.js.map

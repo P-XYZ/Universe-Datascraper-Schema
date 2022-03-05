@@ -22,6 +22,7 @@ export declare class NFTToken {
     sentForMediaAt: Date;
     alternativeMediaFiles: AlternativeMediaFile[];
     needToRefresh: boolean;
+    source: string;
 }
 export declare type NFTTokensDocument = NFTToken & Document;
 export declare const NFTTokensSchema: import("mongoose").Schema<any, import("mongoose").Model<any, any, any, any>, any, any>;
