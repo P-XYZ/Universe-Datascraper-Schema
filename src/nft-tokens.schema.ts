@@ -1,6 +1,6 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
-import { MediaFileType, SupportedTokenTypes } from './types';
+import { MediaFileType, SourceTypes, SupportedTokenTypes } from './types';
 
 export class Owner {
   @Prop({ trim: true, index: true, required: true })
@@ -63,6 +63,9 @@ export class NFTToken {
 
   @Prop({ default: false })
   public needToRefresh: boolean;
+
+  @Prop({ trim: true, enum: SourceTypes, default: SourceTypes.ARCHIVE })
+  public source: string;
 }
 
 export type NFTTokensDocument = NFTToken & Document;
@@ -74,4 +77,5 @@ export const NFTTokensSchema =
 NFTTokensSchema.index({ contractAddress: 1, tokenId: 1 }, { unique: true });
 NFTTokensSchema.index({ "owners.address": 1 });
 NFTTokensSchema.index({ "owners.transactionHash": 1 });
+NFTTokensSchema.index({ source: 1 });
 

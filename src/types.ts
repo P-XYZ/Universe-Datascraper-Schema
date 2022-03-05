@@ -20,3 +20,8 @@ export enum MediaFileType {
   Misc = 'misc',
   IFRAME = 'iframe',
 }
+
+export enum SourceTypes {
+  ARCHIVE = 'ARCHIVE',
+  MONITOR = 'MONITOR',
+}
