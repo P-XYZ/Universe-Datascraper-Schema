@@ -1,5 +1,5 @@
 import { Document } from 'mongoose';
-export declare class NFTTokenOwner {
+export declare class NFTErc1155TokenOwner {
     contractAddress: string;
     tokenId: string;
     address: string;
@@ -10,5 +10,5 @@ export declare class NFTTokenOwner {
     tokenType: string;
     tokenName: string;
 }
-export declare type NFTTokenOwnerDocument = NFTTokenOwner & Document;
+export declare type NFTTokenOwnerDocument = NFTErc1155TokenOwner & Document;
 export declare const NFTTokenOwnerSchema: import("mongoose").Schema<any, import("mongoose").Model<any, any, any, any>, any, any>;
