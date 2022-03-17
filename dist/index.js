@@ -13,7 +13,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 __exportStar(require("./nft-collection-task.schema"), exports);
 __exportStar(require("./nft-collection.schema"), exports);
 __exportStar(require("./nft-tokens.schema"), exports);
-__exportStar(require("./nft-erc721-token-owner.schema"), exports);
+__exportStar(require("./nft-token-owner.schema"), exports);
 __exportStar(require("./nft-erc1155-token-owner.schema"), exports);
 __exportStar(require("./nft-token-owners-task.schema"), exports);
 __exportStar(require("./nft-transfer-history.schema"), exports);

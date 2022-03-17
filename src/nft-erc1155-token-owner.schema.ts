@@ -2,7 +2,6 @@ import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
 import { SupportedTokenTypes } from './types';
 
-//ERC721 and Cryptopunks only have 1 owner
 //ERC1155 can have multiple owners
 @Schema({ timestamps: true, collection: 'nft-erc1155-token-owners' })
 export class NFTErc1155TokenOwner {
@@ -34,10 +33,10 @@ export class NFTErc1155TokenOwner {
   public tokenName: string;
 }
 
-export type NFTTokenOwnerDocument = NFTErc1155TokenOwner & Document;
+export type NFTErc1155TokenOwnerDocument = NFTErc1155TokenOwner & Document;
 
-export const NFTTokenOwnerSchema =
+export const NFT1155TokenOwnerSchema =
   SchemaFactory.createForClass(NFTErc1155TokenOwner);
 
-NFTTokenOwnerSchema.index({ contractAddress: 1, tokenId: 1, address: 1, transactionHash: 1 }, { unique: true });
-NFTTokenOwnerSchema.index({ blockNum: -1, logIndex: -1 });
+NFT1155TokenOwnerSchema.index({ contractAddress: 1, tokenId: 1, address: 1, transactionHash: 1 }, { unique: true });
+NFT1155TokenOwnerSchema.index({ blockNum: -1, logIndex: -1 });

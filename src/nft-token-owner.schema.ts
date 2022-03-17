@@ -2,9 +2,9 @@ import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
 import { SupportedTokenTypes } from './types';
 
-//ERC721 and Cryptopunks only have 1 owner
-@Schema({ timestamps: true, collection: 'nft-erc721-token-owners' })
-export class NFTErc721TokenOwner {
+//ERC721 and Cryptopunks owners
+@Schema({ timestamps: true, collection: 'nft-token-owners' })
+export class NFTTokenOwner {
   @Prop({ trim: true, required: true })
   public contractAddress: string;
 
@@ -33,10 +33,10 @@ export class NFTErc721TokenOwner {
   public tokenName: string;
 }
 
-export type NFTErc721TokenOwnerDocument = NFTErc721TokenOwner & Document;
+export type NFTTokenOwnerDocument = NFTTokenOwner & Document;
 
-export const NFTErc721TokenOwnerSchema =
-  SchemaFactory.createForClass(NFTErc721TokenOwner);
+export const NFTTokenOwnerSchema =
+  SchemaFactory.createForClass(NFTTokenOwner);
 
-NFTErc721TokenOwnerSchema.index({ contractAddress: 1, tokenId: 1 }, { unique: true });
-NFTErc721TokenOwnerSchema.index({ blockNum: -1, logIndex: -1 });
+NFTTokenOwnerSchema.index({ contractAddress: 1, tokenId: 1 }, { unique: true });
+NFTTokenOwnerSchema.index({ blockNum: -1, logIndex: -1 });
